@@ -1,4 +1,5 @@
 set shell := ["pwsh.exe", "-c"]
+export CMAKE_POLICY_VERSION_MINIMUM := "3.5"
 
 extract_steam_redist:
     python scripts/extract_steam_redist.py
