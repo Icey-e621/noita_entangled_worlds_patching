@@ -278,11 +278,11 @@ impl NetManager {
             if let Err(err) = self.peer.send(peer, encoded.clone(), reliability) {
                 if cfg!(debug_assertions) {
                     warn!(
-                        "Error while sending message of len {}: {} {:?}",
-                        len, err, msg
+                        "Error while sending message of len {} to peer {}: {} {:?}",
+                        len, peer, err, msg
                     )
                 } else {
-                    warn!("Error while sending message of len {}: {}", len, err)
+                    warn!("Error while sending message of len {}to peer {}: {}", len, peer, err)
                 }
             }
         }
